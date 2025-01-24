@@ -17,5 +17,11 @@ FiveM Server Automatic Install
 bash <(curl -s https://raw.githubusercontent.com/FonicsScriptsDE/FiveMNewInstall2025/refs/heads/main/setup.sh)
 
 
-## Badges
+## Social & Tutorial
+YouTube: https://youtube.com/@fonicsscriptsde?si=aqbT1A3JqXHOcnCF
+
+TikTok: http://tiktok.com/@realfonicsde
+
+## Discord / Kontakt
+Discord: https://discord.gg/pqDvVh9VVr
 
