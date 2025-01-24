@@ -41,17 +41,17 @@ bashSelect
 dir=${directorys[$?]}/..
 
 
-lsof -i :40120
+lsof -i :40110
 if [[ $( echo $? ) == 0 ]]; then
 
   status "It looks like there is something running on the default TxAdmin port. Can we stop/kill it?" "/"
-  export OPTIONS=("Kill PID on port 40120" "Exit the script")
+  export OPTIONS=("Kill PID on port 40110" "Exit the script")
   bashSelect
   case $? in
     0 )
       status "killing PID on 40120"
       runCommand "apt -y install psmisc"
-	  runCommand "fuser -4 40120/tcp -k"
+	  runCommand "fuser -4 40110/tcp -k"
       ;;
     1 )
       exit 0
