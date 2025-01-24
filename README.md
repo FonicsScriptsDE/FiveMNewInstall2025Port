@@ -13,7 +13,7 @@ FiveM Server Automatic Install
 ```
 
 
-## Other Common Github Profile Sections
+## Copy Past Automatic Command
 bash <(curl -s https://raw.githubusercontent.com/FonicsScriptsDE/FiveMNewInstall2025/refs/heads/main/setup.sh)
 
 
