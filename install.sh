@@ -143,7 +143,7 @@ lsof -i :40110
 if [[ $( echo $? ) == 0 ]]; then
 
   status "It looks like there already is something running on the default TxAdmin port. Can we stop/kill it?" "/"
-  export OPTIONS=("Kill PID on port 40120" "Exit the script")
+  export OPTIONS=("Kill PID on port 40110" "Exit the script")
   bashSelect
   case $? in
     0 )
@@ -200,7 +200,7 @@ red="\e[0;91m"
 green="\e[0;92m"
 bold="\e[1m"
 reset="\e[0m"
-port=\$(lsof -Pi :40120 -sTCP:LISTEN -t)
+port=\$(lsof -Pi :40110 -sTCP:LISTEN -t)
 if [ -z "\$port" ]; then
     screen -dmS fivem sh $dir/server/run.sh
     echo -e "\n\${green}TxAdmin was started!\${reset}"
@@ -272,7 +272,7 @@ if [[ -z "$port" ]]; then
     clear
 
     echo -e "\n${green}${bold}TxAdmin${reset}${green} was started successfully${reset}"
-    txadmin="http://$(ifconfig eth0 | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'):40120"
+    txadmin="http://$(ifconfig eth0 | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'):40110"
     echo -e "\n\n${red}${uline}Commands just usable via SSH\n"
     echo -e "${red}To ${reset}${blue}start${reset}${red} TxAdmin run -> ${reset}${bold}sh $dir/start.sh${reset} ${red}!\n"
     echo -e "${red}To ${reset}${blue}stop${reset}${red} TxAdmin run -> ${reset}${bold}sh $dir/stop.sh${reset} ${red}!\n"
