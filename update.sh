@@ -49,7 +49,7 @@ if [[ $( echo $? ) == 0 ]]; then
   bashSelect
   case $? in
     0 )
-      status "killing PID on 40120"
+      status "killing PID on 40110"
       runCommand "apt -y install psmisc"
 	  runCommand "fuser -4 40110/tcp -k"
       ;;
