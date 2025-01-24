@@ -57,8 +57,8 @@ function examServData() {
 
   cat << EOF > $dir/server-data/server.cfg
   # Only change the IP if you're using a server with multiple network interfaces, otherwise change the port only.
-endpoint_add_tcp "0.0.0.0:30120"
-endpoint_add_udp "0.0.0.0:30120"
+endpoint_add_tcp "0.0.0.0:30110"
+endpoint_add_udp "0.0.0.0:30110"
 # These resources will start by default.
 ensure mapmanager
 ensure chat
@@ -139,7 +139,7 @@ clear
 
 dir=/home/FiveM
 
-lsof -i :40120
+lsof -i :40110
 if [[ $( echo $? ) == 0 ]]; then
 
   status "It looks like there already is something running on the default TxAdmin port. Can we stop/kill it?" "/"
@@ -147,9 +147,9 @@ if [[ $( echo $? ) == 0 ]]; then
   bashSelect
   case $? in
     0 )
-      status "killing PID on 40120"
+      status "killing PID on 40110"
       runCommand "apt -y install psmisc"
-	  runCommand "fuser -4 40120/tcp -k"
+	  runCommand "fuser -4 40110/tcp -k"
       ;;
     1 )
       exit 0
@@ -228,7 +228,7 @@ status "Create crontab to autostart txadmin (recommended)"
       sleep 0;;
   esac
 
-port=$(lsof -Pi :40120 -sTCP:LISTEN -t)
+port=$(lsof -Pi :40110 -sTCP:LISTEN -t)
 
 if [[ -z "$port" ]]; then
 
