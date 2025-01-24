@@ -10,7 +10,7 @@ Schaue gern auf meinem YT Kanal vorbei! [YouTube](https://youtube.com/@fonicsscr
 ## Kopiere denn kompletten Code und Füge ihn ein
 
 bash <(curl -s https://raw.githubusercontent.com/
-FonicsScriptsDE/FiveMNewInstall2025
+FonicsScriptsDE/FiveMNewInstall2025Port
 /refs/heads/main/setup.sh)
 
 Nun wünsche ich dir viel Spaß mit deinem FiveM Server!
